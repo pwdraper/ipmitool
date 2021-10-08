@@ -1,3 +1,9 @@
+Fix the delloem powermonitor cumulative output to show the expected
+values and the expected precision.
+
+Fix the delloem powermonitor output to restore line breaks and clean
+up formatting.
+
 version 1.8.18 2016-10-08
 	* Add mac2str() and str2mac() to print/parse MAC address
 	* Change formatting, remove commented-out code in
