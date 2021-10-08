@@ -2832,18 +2832,18 @@ ipmi_powermgmt(struct ipmi_intf * intf)
 
 	printf("Power Tracking Statistics\n");
 	printf("Statistic      : Cumulative Energy Consumption\n");
-	printf("Start Time     : %s", ipmi_timestamp_numeric(cumStartTime));
-	printf("Finish Time    : %s", ipmi_timestamp_numeric(bmctime));
+	printf("Start Time     : %s\n", ipmi_timestamp_numeric(cumStartTime));
+	printf("Finish Time    : %s\n", ipmi_timestamp_numeric(bmctime));
 	printf("Reading        : %d.%03d kWh\n\n", cumReading, remainder);
 
 	printf("Statistic      : System Peak Power\n");
-	printf("Start Time     : %s", ipmi_timestamp_numeric(maxPeakStartTime));
-	printf("Peak Time      : %s", ipmi_timestamp_numeric(wattPeakTime));
+	printf("Start Time     : %s\n", ipmi_timestamp_numeric(maxPeakStartTime));
+	printf("Peak Time      : %s\n", ipmi_timestamp_numeric(wattPeakTime));
 	printf("Peak Reading   : %d W\n\n", wattReading);
 
 	printf("Statistic      : System Peak Amperage\n");
-	printf("Start Time     : %s", ipmi_timestamp_numeric(maxPeakStartTime));
-	printf("Peak Time      : %s", ipmi_timestamp_numeric(ampPeakTime));
+	printf("Start Time     : %s\n", ipmi_timestamp_numeric(maxPeakStartTime));
+	printf("Peak Time      : %s\n", ipmi_timestamp_numeric(ampPeakTime));
 	printf("Peak Reading   : %d.%d A\n", ampReading, ampReadingRemainder);
 	return 0;
 }
