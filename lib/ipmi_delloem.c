@@ -2826,7 +2826,6 @@ ipmi_powermgmt(struct ipmi_intf * intf)
 
 	remainder = (cumReading % 1000);
 	cumReading = cumReading / 1000;
-	remainder = (remainder + 50) / 100;
 
 	ampReadingRemainder = ampReading % 10;
 	ampReading = ampReading / 10;
@@ -2835,7 +2834,7 @@ ipmi_powermgmt(struct ipmi_intf * intf)
 	printf("Statistic      : Cumulative Energy Consumption\n");
 	printf("Start Time     : %s", ipmi_timestamp_numeric(cumStartTime));
 	printf("Finish Time    : %s", ipmi_timestamp_numeric(bmctime));
-	printf("Reading        : %d.%d kWh\n\n", cumReading, remainder);
+	printf("Reading        : %d.%03d kWh\n\n", cumReading, remainder);
 
 	printf("Statistic      : System Peak Power\n");
 	printf("Start Time     : %s", ipmi_timestamp_numeric(maxPeakStartTime));
